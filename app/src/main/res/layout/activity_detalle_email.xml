@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp"> <!-- Añade margen inferior -->
+
+    <!-- Vista para la imagen de perfil -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/profile_image"
+        android:contentDescription="@string/profile_image" />
+
+    <!-- Vista para el texto -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imageViewProfile"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <!-- TextView para el asunto del correo -->
+        <TextView
+            android:id="@+id/textViewSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sender"
+            android:textStyle="bold"
+            android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="sans-serif-medium"/>
+
+        <!-- TextView para el remitente -->
+        <TextView
+            android:id="@+id/textViewSender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            android:textStyle="bold"
+            android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-medium"/>
+
+        <!-- TextView para la información del correo -->
+        <TextView
+            android:id="@+id/textViewInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Information"
+            android:textSize="18sp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

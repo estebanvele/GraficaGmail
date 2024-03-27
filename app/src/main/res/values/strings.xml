@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GraficaGmail</string>
+    <string name="profile_image">Descripción de la imagen de perfil</string>
+    <string name="textviewinfo">textViewInfo</string>
+    <string name="received_time">Received time</string>
+
+</resources>
