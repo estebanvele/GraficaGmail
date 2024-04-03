@@ -67,6 +67,19 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+   
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadReadStatus();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        saveReadStatus();
+    }
+
     // Cargar el estado de lectura de cada correo electrónico desde SharedPreferences
     private void loadReadStatus() {
         SharedPreferences sharedPreferences = getSharedPreferences("EmailReadStatus", Context.MODE_PRIVATE);
@@ -84,4 +97,5 @@ public class MainActivity extends AppCompatActivity {
         }
         editor.apply();
     }
+
 }
